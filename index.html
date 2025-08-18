@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Brands</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for cart icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="navbar">
+    <!-- Left: Logo -->
+    <div class="logo">Royal <span>Brands</span></div>
+
+    <!-- Right: Cart + Desktop Navigation -->
+    <div class="desktop-nav">
+      <nav>
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Our products & services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="cart">
+        <i class="fas fa-shopping-cart"></i>
+
+        <span class="cart-count">0</span>
+
+        <div class="mini-cart">
+    <p class="mini-cart-title">Your Cart</p>
+    <ul class="mini-cart-list"></ul>
+
+    
+    <button id="order-btn" style="display:none">Order</button>
+
+    <p class="mini-cart-empty">Your cart is empty</p>
+  </div> 
+      </div>
+
+    <!-- Mobile: Cart + Toggle -->
+    <div class="mobile-nav">
+      <button class="toggle-btn" id="menu-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </div>
+
+  <!-- Dropdown Menu (for mobile only) -->
+  <div class="dropdown-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Shop</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero hidden">
+    <div class="hero-content">
+      <h1>Quality Products, Premium Services</h1>
+      <p>Your one-stop destination for stylish clothing & creative branding.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+<section id="about" class="about">
+  <div class="container about-container">
+    
+    <!-- Left: Owner Image -->
+    <div class="about-image">
+      <img src="images/royalBrands.jpg" alt="Owner of Royal Brands">
+    </div>
+    
+    <!-- Right: About Content -->
+    <div class="about-content">
+      <h2>About <span>Royal Brands</span></h2>
+      <p>
+        Royal Brands is dedicated to delivering top-quality clothing and branding services. 
+        From premium T-shirts to custom graphic designs, we aim to provide products that 
+        make a lasting impression. Our mission is to blend creativity, style, and quality 
+        into everything we offer.
+      </p>
+      
+      <!-- Social Media Icons -->
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61555788837383"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Our Products & Services Section -->
+<section id="products" class="products">
+
+<div class="products-header">
+  <h2>Our <span>Products</span> & Services</h2>
+  <p class="section-subtitle">Proudly offered by RoyalBrands Proprietorship</p>
+
+  <div class="category-toggle">
+    <button class="category-btn active" data-category="clothing">Clothing</button>
+    <button class="category-btn" data-category="flyers">Flyers & Logos</button>
+  </div>
+</div>
+
+
+ <div id="clothing" class="product-grid">
+      
+  <div class="product-card" data-id="tshirt-001" id="one">
+      <img src="images/T-shirts.jpg" alt="Tshirt with graphics" class="viewable">
+      <div class="product-info">
+        <h3>P250 - Graphic Tshirt</h3>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div> 
+
+    <div class="product-card" data-id="hat-001" id="two">
+      <img src="images/bernie.jpg" alt="Hat" class="viewable">
+      <div class="product-info">
+        <h3>P80 - Hat</h3>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+
+      <div class="product-card" data-id="shorts-001" id="three">
+      <img src="images/Shorts.jpg" alt="Shorts" class="viewable">
+      <div class="product-info">
+        <h3>P250 - Graphic Shorts</h3>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div> 
+
+      <div class="product-card" data-id="hoodie-001" id="four">
+      <img src="images/hoods.jpg" alt="Hoodie with graphics" class="viewable">
+      <div class="product-info">
+        <h3>P250 - Graphic Hoodie</h3>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div> 
+
+    <div class="product-card" data-id="bag-001">
+      <img src="images/Bags.jpg" alt="Bag with graphics" class="viewable">
+      <div class="product-info">
+        <h3>P250 - Graphic Bag</h3>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div> 
+  </div>
+
+   <div id="flyers" class="product-grid" style="display: none;">
+
+  <div class="product-card" data-name="Logo Design (RoyalCreatives)" data-price="P50">
+  <div class="product-image">
+    <img src="images/flyer1.jpg" alt="Logo Design">
+    <div class="product-info">
+      <h3>Logo Design (RoyalCreatives)</h3>
+      <p class="price">P50</p>
+      <button class="contactme">Contact Me</button>
+    </div>
+  </div>
+</div>
+
+  <div class="product-card" data-name="Logo Design (RoyalCreatives)" data-price="P50">
+    <div class="product-image">
+      <img src="images/flyer2.jpg" alt="Logo Design">
+      <div class="product-info">
+        <h3>Logo Design (RoyalCreatives)</h3>
+        <p class="price">P50</p>
+        <button class="contactme">Contact Me</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-name="Logo Design (RoyalCreatives)" data-price="P50">
+    <div class="product-image">
+      <img src="images/flyer3.jpg" alt="Logo Design">
+      <div class="product-info">
+        <h3>Logo Design (RoyalCreatives)</h3>
+        <p class="price">P50</p>
+        <button class="contactme">Contact Me</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="product-card" data-name="Logo Design (RoyalCreatives)" data-price="P50">
+    <div class="product-image">
+      <img src="images/flyer5.jpg" alt="Logo Design">
+      <div class="product-info">
+        <h3>Logo Design (RoyalCreatives)</h3>
+        <p class="price">P50</p>
+        <button class="contactme">Contact Me</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</section>
+
+<section id="contact" class="contact-section">
+  <h2>Contact <span>Us</span></h2>
+  <div class="contact-container">
+    
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p>Email: <a href="mailto:disekokatso@gmail.com">disekokatso@gmail.com</a></p>
+      <p>Phone: <a href="tel:+26774225728">+267 74 225 728</a></p>
+      <p>Location: Gaborone, Botswana</p>
+    </div>
+
+  </div>
+</section>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+<script>
+  // Change to your real WhatsApp number
+  const WHATSAPP_NUMBER = '26774225728';   // no +, no spaces
+
+  document.addEventListener('click', e => {
+    if (!e.target.classList.contains('contactme')) return;
+
+    const card  = e.target.closest('.product-card');
+    const name  = card.dataset.name;
+    const price = card.dataset.price;
+
+    const text = encodeURIComponent(
+      `Hi, I am interested in: ${name} - ${price}`
+    );
+
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`,
+      '_blank'
+    );
+  });
+</script>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+</body>
+</html>
